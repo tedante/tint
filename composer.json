@@ -1,5 +1,6 @@
 {
     "require": {
-        "duncan3dc/blade": "^4.1"
+        "duncan3dc/blade": "^4.1",
+        "pecee/simple-router": "^3.4"
     }
 }

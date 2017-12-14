@@ -28,6 +28,7 @@ class ComposerStaticInitec41c2b419da0dee07bb3af0dba78f13
             'Psr\\SimpleCache\\' => 16,
             'Psr\\Log\\' => 8,
             'Psr\\Container\\' => 14,
+            'Pecee\\' => 6,
         ),
         'I' => 
         array (
@@ -80,6 +81,10 @@ class ComposerStaticInitec41c2b419da0dee07bb3af0dba78f13
         'Psr\\Container\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/container/src',
+        ),
+        'Pecee\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/pecee/simple-router/src/Pecee',
         ),
         'Illuminate\\View\\' => 
         array (
