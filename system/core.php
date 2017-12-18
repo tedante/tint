@@ -24,4 +24,15 @@ foreach ($module as $item) {
 	require './system/module/' . $item . '.php';
 }
 
- ?>
+require_once './app/controller/controller.php';
+
+foreach ($controllerName as $item => $itemName) {
+	require_once './app/controller/'.$itemName.'.php';
+	${$item} = new $itemName;
+	// die();
+}
+
+require_once './app/routes.php';
+
+
+?>
