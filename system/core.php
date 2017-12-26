@@ -24,6 +24,15 @@ foreach ($module as $item) {
 	require './system/module/' . $item . '.php';
 }
 
+require_once './app/model/model.php';
+
+foreach ($modelName as $item => $itemName) {
+	require_once './app/model/'.$itemName.'.php';
+	// ${$item} = new $itemName;
+	// var_dump($loginModel);
+	// die();
+}
+
 require_once './app/controller/controller.php';
 
 foreach ($controllerName as $item => $itemName) {
@@ -32,7 +41,6 @@ foreach ($controllerName as $item => $itemName) {
 	// die();
 }
 
-require_once './app/routes.php';
 
 
 ?>

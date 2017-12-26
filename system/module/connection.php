@@ -13,13 +13,14 @@ class Connection
 		}
 	}
 
-	public function index()
+	public static function index()
 	{
-		$koneksi = oci_connect(Config::$username(), Config::$password(), Config::$database());
+		$koneksi = oci_connect(Config::$username, Config::$password, Config::$database);
 		if (!$koneksi) {
 			$err = oci_error();
 			echo "Gagal tersambung ke ORACLE". $err['text'];
 		}
+		return $koneksi;
 	}
 }
 

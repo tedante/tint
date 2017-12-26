@@ -7,7 +7,7 @@
     <title>Home || Elixir Fashion</title>
 	<!-- All css Files Here -->
 	<!-- fonts -->
-	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,500' rel='stylesheet' type='text/css'>
+	
 	<!-- bootstrap css -->
 	<link rel="stylesheet" href="resources/css/bootstrap.min.css" />
 	<!-- fontawesome css -->
@@ -54,7 +54,7 @@
 							<ul>
 								<li><a href="#">Account</a></li>
 								<li><a href="#">Wishlist</a></li>
-								<li><a href="#">Register / Login</a></li>
+								<li><a href="index.php?controller=login&action=index">Register / Login</a></li>
 								<li class="searchbox">
 									<input type="search" placeholder="Search......" name="search" class="searchbox-input" onkeyup="buttonUp();" required>
 									<input type="submit" class="searchbox-submit" value="">
@@ -70,7 +70,7 @@
 				<div class="row mega_relative">
 					<div class="col-xs-12 col-sm-2">
 						<div class="logo head_lo">
-							<a href="index.html"><img src="images/logo.png" alt="Logo" /></a>
+							<a href="index.html"><img src="resources/images/logo.png" alt="Logo" /></a>
 						</div>
 					</div>
 					<div class="col-sm-10">

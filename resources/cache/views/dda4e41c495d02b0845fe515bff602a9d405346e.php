@@ -6,12 +6,12 @@
 			<div class="col-md-8 col-md-offset-2">
 				<div class="panel panel-default">
 					<div class="panel-body">
-						<form class="form-horizontal" method="POST" action="">
+						<form class="form-horizontal" method="POST" action="index.php?controller=login&action=login_proccess">
 							<div class="form-group">
-								<label for="email" class="col-md-4 control-label">E-Mail Address</label>
+								<label for="email" class="col-md-4 control-label">Username</label>
 
 								<div class="col-md-6">
-									<input id="email" type="email" class="form-control" name="email" value="" required autofocus>
+									<input id="email" type="text" class="form-control" name="username" value="" required autofocus>
 								</div>
 							</div>
 							<div class="form-group">
@@ -34,7 +34,7 @@
 
 							<div class="form-group">
 								<div class="col-md-8 col-md-offset-4">
-									<button type="submit" class="btn subscribe_btn">
+									<button type="submit" class="btn subscribe_btn" name="submit">
 										Login
 									</button>
 

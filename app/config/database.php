@@ -4,7 +4,7 @@
 * Config Database
 */
 class Config{
-	public static $baseurl		= "tint";
+	public static $baseurl		= "http://localhost/tint/";
 
 
 	/**

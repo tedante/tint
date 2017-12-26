@@ -3,7 +3,8 @@
 
 $controllerName = [
 	'home' => 'HomeController',
-	'login' => 'LoginController'
+	'login' => 'LoginController',
+	'admin' => 'AdminController'
 ];
 
  ?>
