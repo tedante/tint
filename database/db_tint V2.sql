@@ -1,3 +1,5 @@
+
+-- Version 3
 --Create database
 create user db_tint identified by db_tint;
 
@@ -85,31 +87,31 @@ create table tb_store(
 create sequence seq_store_id increment by 1;
 
 
---  CREATE TABLE CATEGORY  --
-create table tb_category(
-	category_id number not null,
-	category_name varchar2(35) not null,
-	deleted_at timestamp,
-	CONSTRAINT pk_category PRIMARY KEY (category_id)
-);
-create sequence seq_category_id increment by 1;
+-- --  CREATE TABLE CATEGORY  --
+-- create table tb_category(
+-- 	category_id number not null,
+-- 	category_name varchar2(35) not null,
+-- 	deleted_at timestamp,
+-- 	CONSTRAINT pk_category PRIMARY KEY (category_id)
+-- );
+-- create sequence seq_category_id increment by 1;
 
 
---  CREATE TABLE PRODUCT  --
-create table tb_product(
-	product_id number not null,
-	store number not null,
-	category number not null,
-	product_name varchar2(100) not null,
-	product_desc varchar2(4000) not null,
-	product_price number not null,
-	product_stok number not null,
-	deleted_at timestamp,
-	CONSTRAINT pk_product PRIMARY KEY (product_id),
-	CONSTRAINT fk_store_product FOREIGN KEY (store) REFERENCES tb_store(store_id),
-	CONSTRAINT fk_category_product FOREIGN KEY (category) REFERENCES tb_category(category_id)
-);
-create sequence seq_product_id increment by 1;
+-- --  CREATE TABLE PRODUCT  --
+-- create table tb_product(
+-- 	product_id number not null,
+-- 	store number not null,
+-- 	category number not null,
+-- 	product_name varchar2(100) not null,
+-- 	product_desc varchar2(4000) not null,
+-- 	product_price number not null,
+-- 	product_stok number not null,
+-- 	deleted_at timestamp,
+-- 	CONSTRAINT pk_product PRIMARY KEY (product_id),
+-- 	CONSTRAINT fk_store_product FOREIGN KEY (store) REFERENCES tb_store(store_id),
+-- 	CONSTRAINT fk_category_product FOREIGN KEY (category) REFERENCES tb_category(category_id)
+-- );
+-- create sequence seq_product_id increment by 1;
 
 
 --  CREATE TABLE CART --
@@ -170,3 +172,28 @@ create table tb_payment(
 );
 create sequence seq_payment_id increment by 1;
 
+create table tb_category(
+	category_id number not null,
+	category_name varchar2(35) not null,
+	category_parent number,
+	deleted_at timestamp,
+	CONSTRAINT pk_category PRIMARY KEY (category_id),
+	CONSTRAINT fk_parent_category FOREIGN KEY (category_parent) REFERENCES tb_category(category_id)
+);
+create sequence seq_category_id increment by 1;
+
+--  CREATE TABLE PRODUCT  --
+create table tb_product(
+	product_id number not null,
+	store number not null,
+	category number not null,
+	product_name varchar2(100) not null,
+	product_desc varchar2(4000),
+	product_price number not null,
+	product_stok number not null,
+	photo varchar2,
+	deleted_at timestamp,
+	CONSTRAINT pk_product PRIMARY KEY (product_id),
+	CONSTRAINT fk_store_product FOREIGN KEY (store) REFERENCES tb_store(store_id),
+	CONSTRAINT fk_category_product FOREIGN KEY (category) REFERENCES tb_category(category_id)
+);

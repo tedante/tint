@@ -4,7 +4,9 @@
 $controllerName = [
 	'home' => 'HomeController',
 	'login' => 'LoginController',
-	'admin' => 'AdminController'
+	'admin' => 'AdminController',
+	'category' => 'CategoryController',
+	'product' => 'ProductController',
 ];
 
  ?>

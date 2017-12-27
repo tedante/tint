@@ -3,7 +3,9 @@
 
 $modelName = [
 	'loginModel' => 'LoginModel',
-	'adminWModel' => 'AdminModel'
+	'adminWModel' => 'AdminModel',
+	'productModel' => 'ProductModel',
+	'categoryModel' => 'CategoryModel',
 ];
 
  ?>
