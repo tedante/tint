@@ -21,7 +21,10 @@ if($controller == "login" && $action == "index") {
 	$admin->index();
 } else if($controller == "login" && $action == "logout"){
 	$login->logout();
-} else if($controller == "category" && $action == "index"){
+} 
+
+// Category Route Group
+else if($controller == "category" && $action == "index"){
 	$category->index();
 } else if($controller == "category" && $action == "create"){
 	$category->create();
@@ -36,6 +39,24 @@ if($controller == "login" && $action == "index") {
 } else if($controller == "category" && $action == "destroy"){
 	$id = $_GET['id'];
 	$category->destroy($id);
+}
+
+// Category Route Group
+else if($controller == "product" && $action == "index"){
+	$product->index();
+} else if($controller == "product" && $action == "create"){
+	$product->create();
+} else if($controller == "product" && $action == "store"){
+	if(isset($_POST['submit'])) {
+		// var_dump($_POST);var_dump($_FILES['photo']);die();
+		$product->store($_POST, $_FILES['photo']);	
+	}
+} else if($controller == "product" && $action == "edit"){
+	$id = $_GET['id'];
+	$product->edit($id);
+} else if($controller == "product" && $action == "destroy"){
+	$id = $_GET['id'];
+	$product->destroy($id);
 }
 else {
 	$home->index();

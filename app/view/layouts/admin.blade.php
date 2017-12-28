@@ -329,7 +329,7 @@
 				</a>
 				<ul class="treeview-menu">
 					<li><a href="{{ Config::$baseurl }}/index.php?controller=category&action=index"><i class="fa fa-circle-o"></i> Category</a></li>
-					<li><a href="index2.html"><i class="fa fa-circle-o"></i> Product</a></li>
+					<li><a href="{{ Config::$baseurl }}/index.php?controller=product&action=index"><i class="fa fa-circle-o"></i> Product</a></li>
 				</ul>
 			</li>
 			{{-- <li class="treeview">

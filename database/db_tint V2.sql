@@ -185,7 +185,6 @@ create sequence seq_category_id increment by 1;
 --  CREATE TABLE PRODUCT  --
 create table tb_product(
 	product_id number not null,
-	store number not null,
 	category number not null,
 	product_name varchar2(100) not null,
 	product_desc varchar2(4000),
@@ -197,6 +196,7 @@ create table tb_product(
 	CONSTRAINT fk_store_product FOREIGN KEY (store) REFERENCES tb_store(store_id),
 	CONSTRAINT fk_category_product FOREIGN KEY (category) REFERENCES tb_category(category_id)
 );
+create sequence seq_product_id increment by 1;
 
 -- INSERT PARENT 
 insert into tb_category(category_id, category_name) values(seq_category_id.nextval,'Kaos'); 

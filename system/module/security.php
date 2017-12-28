@@ -18,7 +18,7 @@ class Session
 		if ($_SESSION['login'] == TRUE && $_SESSION['username'] == "admin") {
 			return TRUE;
 		} else {
-			header("location:index.php?controller=home&action=index");
+			return FALSE;
 		}
 	}
 }

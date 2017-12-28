@@ -17,10 +17,10 @@ class LoginController extends Controller
 
 	function login_proccess($data) {
 		$login = $this->model->getLogin($data);
-		// var_dump($data);
+		// var_dump(count($login));
 		// 	die();
 		// echo $row;die();
-		if($login != NULL) {
+		if(count($login) >= 1) {
             $_SESSION['login'] = true;
 			$_SESSION["id"] = $login['USER_ID'];
 			$_SESSION["username"] = $login['USERNAME'];
