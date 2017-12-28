@@ -12,33 +12,38 @@ class CategoryController extends Controller
 	}
 
 	function index() {
-		$data = $this->model->getById($id);
+		$data = $this->model->get();
+		$dataAudit = $this->model->getAudit();
 		// print_r($data);
-		echo $this->view->render("admin.index2", ['data' => $data, 'dataAudit' => $dataAudit]);
+		echo $this->view->render("category.index", ['data' => $data, 'dataAudit' => $dataAudit]);
 	}
 
 	public function create() {
+		echo $this->view->render("category.create");
     	// code
     }
 
-	public function store() {
-    	// code
+	public function store($data) {
+    	$store = $this->model->insert($data);
+    	header("location:". Config::$baseurl ."index.php?controller=category&action=index");
     }
 
 	public function show() {
     	// code
     }
 
-	public function edit() {
-    	// code
+	public function edit($id) {
+    	$data = $this->model->getById($id);
+		echo $this->view->render("category.edit", ['data' => $data]);
     }
 
 	public function update() {
     	// code
     }
 
-	public function destroy() {
-    	// code
+	public function destroy($id) {
+    	$this->model->destroy($id);
+    	header("location:". Config::$baseurl ."index.php?controller=category&action=index");
     }
 
 }

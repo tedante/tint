@@ -144,7 +144,7 @@
 		<li class="dropdown user user-menu">
 			<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 				<img src="<?php echo e(Config::$baseurl); ?>resources/adminlte/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-				<span class="hidden-xs"><?php echo e($data['USER_NAME']); ?></span>
+				<span class="hidden-xs"><?php echo e($_SESSION['name']); ?></span>
 			</a>
 			<ul class="dropdown-menu">
 				<!-- User image -->
@@ -153,7 +153,7 @@
 
 					
 					<p id="tk-panel-profile">
-						<?php echo e($data['USER_NAME']); ?> - <?php echo e($_SESSION['username']); ?>
+						<?php echo e($_SESSION['name']); ?> - <?php echo e($_SESSION['username']); ?>
 
 						
 					</p>
@@ -186,7 +186,7 @@
 				<img src="<?php echo e(Config::$baseurl); ?>resources/adminlte/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 			</div>
 			<div class="pull-left info">
-				<p><?php echo e($data['USER_NAME']); ?></p>
+				<p><?php echo e($_SESSION['name']); ?></p>
 				
 			</div>
 		</div>
@@ -212,7 +212,7 @@
 					</span>
 				</a>
 				<ul class="treeview-menu">
-					<li><a href="<?php echo e(Config::$baseurl); ?>/index.php?controller=admin&action=product"><i class="fa fa-circle-o"></i> Category</a></li>
+					<li><a href="<?php echo e(Config::$baseurl); ?>/index.php?controller=category&action=index"><i class="fa fa-circle-o"></i> Category</a></li>
 					<li><a href="index2.html"><i class="fa fa-circle-o"></i> Product</a></li>
 				</ul>
 			</li>

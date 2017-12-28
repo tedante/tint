@@ -191,9 +191,34 @@ create table tb_product(
 	product_desc varchar2(4000),
 	product_price number not null,
 	product_stok number not null,
-	photo varchar2,
+	photo varchar2(200) null,
 	deleted_at timestamp,
 	CONSTRAINT pk_product PRIMARY KEY (product_id),
 	CONSTRAINT fk_store_product FOREIGN KEY (store) REFERENCES tb_store(store_id),
 	CONSTRAINT fk_category_product FOREIGN KEY (category) REFERENCES tb_category(category_id)
 );
+
+-- INSERT PARENT 
+insert into tb_category(category_id, category_name) values(seq_category_id.nextval,'Kaos'); 
+insert into tb_category(category_id, category_name) values(seq_category_id.nextval,'Polo Shirt'); 
+insert into tb_category(category_id, category_name) values(seq_category_id.nextval,'Hoodie and Jacket'); 
+
+-- INSERT CHILD KAOS 
+insert into tb_category(category_id, category_name, category_parent)  values(seq_category_id.nextval,'Kaos Pria',1); 
+insert into tb_category(category_id, category_name, category_parent) values(seq_category_id.nextval,'Kaos Wanita',1); 
+insert into tb_category(category_id, category_name, category_parent) values(seq_category_id.nextval,'Kaos Anak',1); 
+insert into tb_category(category_id, category_name, category_parent) values(seq_category_id.nextval,'Kaos Raglan',1); 
+insert into tb_category(category_id, category_name, category_parent) values(seq_category_id.nextval,'Kaos Lengan Panjang',1); 
+insert into tb_category(category_id, category_name, category_parent) values(seq_category_id.nextval,'Kaos V-Neck',1); 
+insert into tb_category(category_id, category_name, category_parent) values(seq_category_id.nextval,'Tank Top',1); 
+
+-- INSERT CHILD POLO SHIRT 
+insert into tb_category(category_id, category_name, category_parent) values(seq_category_id.nextval,'Polo Pria',2); 
+insert into tb_category(category_id, category_name, category_parent) values(seq_category_id.nextval,'Polo Wanita',2); 
+
+-- INSERT CHILD HOODIE & JACKET 
+insert into tb_category(category_id, category_name, category_parent) values(seq_category_id.nextval,'Hoodie Jumper',3); 
+insert into tb_category(category_id, category_name, category_parent) values(seq_category_id.nextval,'Hoodie Zipper',3); 
+insert into tb_category(category_id, category_name, category_parent) values(seq_category_id.nextval,'Hoodie Zipper Anak',3); 
+insert into tb_category(category_id, category_name, category_parent) values(seq_category_id.nextval,'Jaket Varsity',3); 
+insert into tb_category(category_id, category_name, category_parent) values(seq_category_id.nextval,'Sweater',3);

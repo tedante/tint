@@ -14,6 +14,7 @@ class AdminController extends Controller
 	function index() {
 		$id = $_SESSION['id'];
 		$data = $this->model->getById($id);
+		$_SESSION['name'] = $data['USER_NAME'];
 		$dataAudit = $this->model->getByIdAudit($id);
 		// print_r($data);
 		echo $this->view->render("admin.index2", ['data' => $data, 'dataAudit' => $dataAudit]);

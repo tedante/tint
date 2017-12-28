@@ -21,6 +21,21 @@ if($controller == "login" && $action == "index") {
 	$admin->index();
 } else if($controller == "login" && $action == "logout"){
 	$login->logout();
+} else if($controller == "category" && $action == "index"){
+	$category->index();
+} else if($controller == "category" && $action == "create"){
+	$category->create();
+} else if($controller == "category" && $action == "store"){
+	if(isset($_POST['submit'])) {
+		$data['name'] = $_POST['name'];
+		$category->store($data);	
+	}
+} else if($controller == "category" && $action == "edit"){
+	$id = $_GET['id'];
+	$category->edit($id);
+} else if($controller == "category" && $action == "destroy"){
+	$id = $_GET['id'];
+	$category->destroy($id);
 }
 else {
 	$home->index();
