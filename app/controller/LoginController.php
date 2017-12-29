@@ -27,7 +27,11 @@ class LoginController extends Controller
 			// $_SESSION["level"] = $data['USER_LEVEL'];
 			// var_dump($_SESSION);
 			// die();
-			header("location:index.php?controller=admin&action=index");
+			if($_SESSION["username"] == 'admin') {
+				header("location:index.php?controller=admin&action=index");
+			} else {
+				header("location:index.php?controller=user&action=index");
+			}
 		} else {
 			header("location:index.php?controller=login&action=index");
 		}

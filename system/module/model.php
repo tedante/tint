@@ -6,6 +6,9 @@ $modelName = [
 	'adminWModel' => 'AdminModel',
 	'productModel' => 'ProductModel',
 	'categoryModel' => 'CategoryModel',
+	'cartModel' => 'CartModel',
+	'orderModel' => 'OrderModel',
+	// 'userModel' => 'UserModel',
 ];
 
  ?>

@@ -7,6 +7,8 @@ $controllerName = [
 	'admin' => 'AdminController',
 	'category' => 'CategoryController',
 	'product' => 'ProductController',
+	'user' => 'UserController',
+	'cart' => 'CartController',
 ];
 
  ?>

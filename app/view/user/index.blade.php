@@ -1,4 +1,4 @@
-@extends('layouts.user')
+@extends('layouts.user2')
 @section('content')
 <!-- Header-Section-End  -->
 
@@ -13,9 +13,9 @@
 				<div class="card-block">
 					<img class="card-img-top" src="{{ Config::$baseurl.$item['PHOTO'] }}" alt="Card image cap">
 					<h4 class="card-title">Card title</h4>
-					<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-					{{-- <a href="{{ Config::$baseurl }}index.php?controller=cart&action=add&id={{$item['PRODUCT_ID']}}" class="btn btn-primary">{{$item['PRODUCT_ID']}}</a> --}}
-					<a href="{{ Config::$baseurl }}index.php?controller=login&action=index" class="btn btn-primary">{{$item['PRODUCT_ID']}}</a>
+					<p class="card-text">{{$item['PRODUCT_DESC']}}</p>
+					<a href="{{ Config::$baseurl }}index.php?controller=cart&action=store&idBarang={{$item['PRODUCT_ID']}}&idUser={{$_SESSION['id']}}" class="btn btn-primary">Add to cart</a>
+					{{-- <a href="{{ Config::$baseurl }}index.php?controller=login&action=index" class="btn btn-primary">{{$item['PRODUCT_ID']}}</a> --}}
 				</div>
 			</div>
 		</div>

@@ -33,7 +33,8 @@
         <?php $__currentLoopData = $data; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
         <tr>
           
-          <th><?php echo e($i); ?></th>
+          
+          <td><?php echo e($item['PRODUCT_ID']); ?></td>
           <td><?php echo e($item['PRODUCT_NAME']); ?></td>
           <td><?php echo e($item['CATEGORY_NAME']); ?></td>
           <td>

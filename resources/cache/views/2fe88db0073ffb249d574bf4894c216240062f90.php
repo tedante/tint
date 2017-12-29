@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Home || Elixir Fashion</title>
+    <title>Tint Fashion - </title>
 	<!-- All css Files Here -->
 	<!-- fonts -->
 	
@@ -45,15 +45,15 @@
 							</ul>
 							<ul class="social_others">
 								<li><a><i class="fa fa-phone"></i>+8801711223344</a></li>
-								<li><a href="#"><i class="fa fa-envelope-o"></i>support@domain.com</a></li>
+								<li><a href="#"><i class="fa fa-envelope-o"></i>tint@fashion.com</a></li>
 							</ul>
 						</div>
 					</div>
 					<div class="col-md-6">
 						<div class="header_top_right text-right">
 							<ul>
-								<li><a href="#">Account</a></li>
-								<li><a href="#">Wishlist</a></li>
+								
+								
 								<li><a href="index.php?controller=login&action=index">Register / Login</a></li>
 								<li class="searchbox">
 									<input type="search" placeholder="Search......" name="search" class="searchbox-input" onkeyup="buttonUp();" required>
@@ -70,7 +70,8 @@
 				<div class="row mega_relative">
 					<div class="col-xs-12 col-sm-2">
 						<div class="logo head_lo">
-							<a href="index.html"><img src="resources/images/logo.png" alt="Logo" /></a>
+							
+							<a href="<?php echo e(Config::$baseurl); ?>" ><span style="font-size: 32px;color: navy;">Tint</span> <span style="font-size: 20px;border-color: navy; opacity: 30;">Fashion</span></a>
 						</div>
 					</div>
 					<div class="col-sm-10">
@@ -85,8 +86,8 @@
 									<li><a href="#">OFFERS</a></li>
 									<li><a href="contact.html">CONTACT</a></li>
 									<li class="shop_icon">
-										<a href="checkout.html"><img src="images/menu_icon_img.png" alt="" /></a>
-										<span>10</span>
+										<a href="checkout.html"><img src="<?php echo e(Config::$baseurl); ?>resources/images/menu_icon_img.png" alt="" /></a>
+										<span><?php echo e($_SESSION['row_cart']); ?></span>
 									</li>
 								</ul>
 							</nav>

@@ -48,6 +48,7 @@ class ComposerStaticInitec41c2b419da0dee07bb3af0dba78f13
         ),
         'C' => 
         array (
+            'Cart\\' => 5,
             'Carbon\\' => 7,
         ),
     );
@@ -116,6 +117,10 @@ class ComposerStaticInitec41c2b419da0dee07bb3af0dba78f13
         'Doctrine\\Common\\Inflector\\' => 
         array (
             0 => __DIR__ . '/..' . '/doctrine/inflector/lib/Doctrine/Common/Inflector',
+        ),
+        'Cart\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/mike182uk/cart/src',
         ),
         'Carbon\\' => 
         array (

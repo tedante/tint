@@ -7,7 +7,7 @@
     <title>Tint Fashion - </title>
 	<!-- All css Files Here -->
 	<!-- fonts -->
-	{{-- <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,500' rel='stylesheet' type='text/css'> --}}
+	
 	<!-- bootstrap css -->
 	<link rel="stylesheet" href="resources/css/bootstrap.min.css" />
 	<!-- fontawesome css -->
@@ -52,9 +52,9 @@
 					<div class="col-md-6">
 						<div class="header_top_right text-right">
 							<ul>
-								{{-- <li><a href="#">Account</a></li> --}}
-								{{-- <li><a href="#">Wishlist</a></li> --}}
-								<li><a href="index.php?controller=login&action=index">Register / Login</a></li>
+								
+								
+								<li><a href="index.php?controller=login&action=logout"><?php echo e($_SESSION['username']); ?></a></li>
 								<li class="searchbox">
 									<input type="search" placeholder="Search......" name="search" class="searchbox-input" onkeyup="buttonUp();" required>
 									<input type="submit" class="searchbox-submit" value="">
@@ -70,8 +70,8 @@
 				<div class="row mega_relative">
 					<div class="col-xs-12 col-sm-2">
 						<div class="logo head_lo">
-							{{-- <a href="index.html"><img src="resources/images/logo.png" alt="Logo" /></a> --}}
-							<a href="{{ Config::$baseurl }}" ><span style="font-size: 32px;color: navy;">Tint</span> <span style="font-size: 20px;border-color: navy; opacity: 30;">Fashion</span></a>
+							
+							<a href="<?php echo e(Config::$baseurl); ?>" ><span style="font-size: 32px;color: navy;">Tint</span> <span style="font-size: 20px;border-color: navy; opacity: 30;">Fashion</span></a>
 						</div>
 					</div>
 					<div class="col-sm-10">
@@ -86,8 +86,8 @@
 									<li><a href="#">OFFERS</a></li>
 									<li><a href="contact.html">CONTACT</a></li>
 									<li class="shop_icon">
-										<a href="checkout.html"><img src="{{ Config::$baseurl }}resources/images/menu_icon_img.png" alt="" /></a>
-										<span>{{$_SESSION['row_cart']}}</span>
+										<a href="<?php echo e(Config::$baseurl); ?>index.php?controller=cart&action=index"><img src="<?php echo e(Config::$baseurl); ?>resources/images/menu_icon_img.png" alt="" /></a>
+										<span><?php echo e($_SESSION['row_cart']); ?></span>
 									</li>
 								</ul>
 							</nav>
@@ -116,7 +116,7 @@
 	</div>
 	<!-- mobile-menu-area end -->
 	
-	@yield('content')
+	<?php echo $__env->yieldContent('content'); ?>
 	
 	<!-- Footer-Section-Start -->
 	<footer>

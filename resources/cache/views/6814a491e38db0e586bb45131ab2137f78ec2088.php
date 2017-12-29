@@ -1,97 +1,34 @@
 <?php $__env->startSection('content'); ?>
 <!-- Header-Section-End  -->
+
+<!-- Product-Section-Strat  -->
+<div class="container">
 	
-	<!-- Product-Section-Strat  -->
-	<section class="product_area section-padding">
-		<div class="padding_right main_single_product">
-			<div class="single_product">
-				<div class="product_img">
-					<img src="resources/images/product/tre-shirt-1.png" alt="DARK BLUE IMAGE" />
-				</div>
-				<div class="product_text dark_product">
-					<h1>DARK BLUE</h1>
-				</div>
-			</div>
-		</div>
-		<div class="padding_left main_single_product">
-			<div class="single_product single_product_two">
-				<div class="product_img">
-					<img src="resources/images/product/tre-shirt-1.png" alt="DARK BLUE IMAGE" />
-				</div>
-				<div class="product_text_two product_text">
-					<h1>MEN'S TEE</h1>
-					<p>100% COMBED COTTON</p>
-					<p>COLOR: DARK BLUE</p>
-					<p>ROUND NECK & HALF SLEEVES</p>
-					<p>Classic fit, slightly long</p>
-					<p>GSM: 180</p>
-					<p>PRICE: $ 21.99</p>
-					<a class="shop_now_btn" href="#">SHOP NOW</a>
+	<div class="row">
+
+		<?php $__currentLoopData = $data; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+		<div class="col-md-4">
+			<div class="card" style="width: 30rem;">
+				<div class="card-block">
+					<img class="card-img-top" src="<?php echo e(Config::$baseurl.$item['PHOTO']); ?>" alt="Card image cap">
+					<h4 class="card-title">Card title</h4>
+					<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+					
+					<a href="<?php echo e(Config::$baseurl); ?>index.php?controller=login&action=index" class="btn btn-primary"><?php echo e($item['PRODUCT_ID']); ?></a>
 				</div>
 			</div>
 		</div>
-		<div class="padding_right main_single_product section-padding-top">
-			<div class="single_product single_product_two">
-				<div class="product_img tre_shirt_2">
-					<img src="resources/images/product/tre-shirt-2.png" alt="DARK BLUE IMAGE" />
-				</div>
-				<div class="product_text_two tre_shirt_2_text product_text">
-					<h1>MEN'S TEE</h1>
-					<p>100% COMBED COTTON</p>
-					<p>COLOR: WHITE & BLACK</p>
-					<p>ROUND NECK & HALF SLEEVES</p>
-					<p>Classic fit, slightly long</p>
-					<p>GSM: 180</p>
-					<p>PRICE: $ 21.99</p>
-					<a class="shop_now_btn" href="#">SHOP NOW</a>
-				</div>
-			</div>
-		</div>
-		<div class="padding_left main_single_product section-padding-top">
-			<div class="single_product">
-				<div class="product_img tre_shirt_2">
-					<img src="resources/images/product/tre-shirt-2.png" alt="DARK BLUE IMAGE" />
-				</div>
-				<div class="product_text dark_product">
-					<h1>WHITE & BLACK</h1>
-				</div>
-			</div>
-		</div>
-		<div class="padding_right main_single_product section-padding-top">
-			<div class="single_product">
-				<div class="product_img tre_shirt_3">
-					<img src="resources/images/product/tre-shirt-3.png" alt="DARK BLUE IMAGE" />
-				</div>
-				<div class="product_text dark_product">
-					<h1>GRAY WITH BLACK</h1>
-				</div>
-			</div>
-		</div>
-		<div class="padding_left main_single_product section-padding-top">
-			<div class="single_product single_product_two">
-				<div class="product_img tre_shirt_3">
-					<img src="resources/images/product/tre-shirt-3.png" alt="DARK BLUE IMAGE" />
-				</div>
-				<div class="product_text_two product_text">
-					<h1>LADIES TEE</h1>
-					<p>100% COMBED COTTON</p>
-					<p>COLOR: GRAY WITH BLACK</p>
-					<p>ROUND NECK & HALF SLEEVES</p>
-					<p>Classic fit, slightly long</p>
-					<p>GSM: 180</p>
-					<p>PRICE: $ 31.99</p>
-					<a class="shop_now_btn" href="#">SHOP NOW</a>
-				</div>
-			</div>
-		</div>
-	</section>
+		<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+	</div>
+		
+	</div>
 	<!-- Product-Section-End  -->
 	<!-- Choose-Section-Strat  -->
 	<section class="choose_area section-padding">
 		<div class="container">
 			<div class="choose_area_text text-center">
 				<div class="choose_title">
-				<h2>WHY CHOOSE OUR TEES ?</h2>
+					<h2>WHY CHOOSE OUR TEES ?</h2>
 				</div>
 				<div class="choose_text">
 					<i class="flaticon-lightbulbs"></i>
@@ -184,9 +121,9 @@
 				</div>
 				<div class="compare_menu col-text-center">
 					<ul class="nav nav-tabs items_ul" role="tablist" id="myTab">
-					  <li role="presentation"><a href="#features" aria-controls="features" role="tab" data-toggle="tab">Features</a></li>
-					  <li role="presentation" class="active"><a href="#tech" aria-controls="tech" role="tab" data-toggle="tab">Tech Spech</a></li>
-					  <li role="presentation"><a href="#guarantee" id="com_3" aria-controls="guarantee" role="tab" data-toggle="tab">guarantee</a></li>
+						<li role="presentation"><a href="#features" aria-controls="features" role="tab" data-toggle="tab">Features</a></li>
+						<li role="presentation" class="active"><a href="#tech" aria-controls="tech" role="tab" data-toggle="tab">Tech Spech</a></li>
+						<li role="presentation"><a href="#guarantee" id="com_3" aria-controls="guarantee" role="tab" data-toggle="tab">guarantee</a></li>
 					</ul>
 				</div>
 				<div class="tab-content items_tab">
@@ -322,5 +259,5 @@
 		</div>
 	</section>
 	<!-- Compare-Ection-End  -->
-<?php $__env->stopSection(); ?>
+	<?php $__env->stopSection(); ?>
 <?php echo $__env->make('layouts.user', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

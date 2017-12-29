@@ -54,7 +54,7 @@
 							<ul>
 								{{-- <li><a href="#">Account</a></li> --}}
 								{{-- <li><a href="#">Wishlist</a></li> --}}
-								<li><a href="index.php?controller=login&action=index">Register / Login</a></li>
+								<li><a href="index.php?controller=login&action=logout">{{$_SESSION['username']}}</a></li>
 								<li class="searchbox">
 									<input type="search" placeholder="Search......" name="search" class="searchbox-input" onkeyup="buttonUp();" required>
 									<input type="submit" class="searchbox-submit" value="">
@@ -86,7 +86,7 @@
 									<li><a href="#">OFFERS</a></li>
 									<li><a href="contact.html">CONTACT</a></li>
 									<li class="shop_icon">
-										<a href="checkout.html"><img src="{{ Config::$baseurl }}resources/images/menu_icon_img.png" alt="" /></a>
+										<a href="{{ Config::$baseurl }}index.php?controller=cart&action=index"><img src="{{ Config::$baseurl }}resources/images/menu_icon_img.png" alt="" /></a>
 										<span>{{$_SESSION['row_cart']}}</span>
 									</li>
 								</ul>

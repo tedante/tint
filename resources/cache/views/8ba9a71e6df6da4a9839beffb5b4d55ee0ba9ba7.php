@@ -33,7 +33,7 @@
         <tr>
           
           <th><?php echo e($i); ?></th>
-          <td><?php echo e($item['CATEGORY_NAME']); ?></td>
+          <td><a href="<?php echo e(Config::$baseurl); ?>index.php?controller=category&action=show&id=<?php echo e($item['CATEGORY_ID']); ?>"><?php echo e($item['CATEGORY_NAME']); ?></a></td>
           <td>
             <a href="<?php echo e(Config::$baseurl); ?>index.php?controller=category&action=edit&id=<?php echo e($item['CATEGORY_ID']); ?>" class="btn btn-info">Update</a> |
             <a href="<?php echo e(Config::$baseurl); ?>index.php?controller=category&action=destroy&id=<?php echo e($item['CATEGORY_ID']); ?>" class="btn btn-danger">Delete</a>

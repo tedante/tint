@@ -42,7 +42,7 @@
         <tr>
           
           <th>{{ $i }}</th>
-          <td>{{ $item['CATEGORY_NAME'] }}</td>
+          <td><a href="{{ Config::$baseurl }}index.php?controller=category&action=show&id={{ $item['CATEGORY_ID'] }}">{{ $item['CATEGORY_NAME'] }}</a></td>
           <td>
             <a href="{{ Config::$baseurl }}index.php?controller=category&action=edit&id={{ $item['CATEGORY_ID'] }}" class="btn btn-info">Update</a> |
             <a href="{{ Config::$baseurl }}index.php?controller=category&action=destroy&id={{ $item['CATEGORY_ID'] }}" class="btn btn-danger">Delete</a>

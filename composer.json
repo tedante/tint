@@ -1,6 +1,7 @@
 {
     "require": {
         "duncan3dc/blade": "^4.1",
-        "klein/klein": "^2.1"
+        "klein/klein": "^2.1",
+        "mike182uk/cart": "^3.0"
     }
 }

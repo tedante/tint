@@ -42,7 +42,8 @@
         @foreach($data as $item)
         <tr>
           
-          <th>{{ $i }}</th>
+          {{-- <th>{{ $i }}</th> --}}
+          <td>{{ $item['PRODUCT_ID'] }}</td>
           <td>{{ $item['PRODUCT_NAME'] }}</td>
           <td>{{ $item['CATEGORY_NAME'] }}</td>
           <td>
