@@ -2277,16 +2277,6 @@ INSERT INTO `districts` VALUES
   ('2105060', '2105', 'SIANTAN TENGAH');
 
 
-insert into tb_user
-(user_id,user_name,user_phone,user_email,user_alamat,username,password,district)
-values
-(seq_user_id.nextval, 'Ahem', '088','ahem@gmail.com','surabaya','ahemm','ieunaminapassword','1');
-insert into tb_user
-(user_id,user_name,user_phone,user_email,user_alamat,username,password,district)
-values
-(seq_user_id.nextval, 'Teddy Koerniadi', '085321870515','teddykoerniadi@gmail.com','Negla','admin','adminadmin',1);
-
-
 
 --  TRIGGER CATEGORY  --
 create or replace trigger CATEGORY_trig

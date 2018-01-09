@@ -53,7 +53,7 @@ else if($controller == "category" && $action == "index"){
 	}
 } else if($controller == "category" && $action == "edit"){
 	$id = $_GET['id'];
-	$category->edit($id);
+	$category->edit('2');
 } else if($controller == "category" && $action == "destroy"){
 	$id = $_GET['id'];
 	$category->destroy($id);

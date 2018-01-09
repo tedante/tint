@@ -35,7 +35,8 @@ foreach ($modelName as $item => $itemName) {
 
 require_once './app/controller/controller.php';
 
-foreach ($controllerName as $item => $itemName) {
+foreach ($controllerName as $item => $
+) {
 	require_once './app/controller/'.$itemName.'.php';
 	${$item} = new $itemName;
 	// die();

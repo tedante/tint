@@ -51,13 +51,6 @@
           </div>
 
           <div class="form-group">
-            <label for="email" class="col-md-4 control-label">Stok</label>
-            <div class="col-md-6">
-              <input id="name" type="number" class="form-control" name="stok" value="" required autofocus>
-            </div>
-          </div>
-
-          <div class="form-group">
             <label for="email" class="col-md-4 control-label">File</label>
             <div class="col-md-6">
               <input id="name" type="file" class="form-control" name="photo" value="" required autofocus>

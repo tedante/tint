@@ -56,6 +56,7 @@ class CategoryModel extends Model
 	public function insert($data)
 	{
 		$query = "INSERT INTO TB_CATEGORY (category_id, category_name) VALUES (seq_category_id.nextval, '".$data['name']."')";
+		"INSERT INTO TB_CATEGORY VALUES (".$id.", '".$nama."')";
 		$oracle = oci_parse(Connection::index(), $query);
 	    oci_execute($oracle);
 	    	// var_dump($oracle);
